@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Advanced Rich Presence (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Advanced Rich Presence (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
