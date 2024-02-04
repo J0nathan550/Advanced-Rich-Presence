@@ -11,14 +11,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Montserrat\Montserrat-Italic.ttf" />
+    <None Remove="Montserrat\Montserrat.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="discord_icon.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Montserrat\Montserrat-Italic.ttf" />
+    <Resource Include="Montserrat\Montserrat.ttf" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
     <PackageReference Include="ModernWpfUI" Version="0.9.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
 
 </Project>

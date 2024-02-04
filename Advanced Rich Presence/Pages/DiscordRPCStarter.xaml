@@ -4,10 +4,45 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Advanced_Rich_Presence.Pages"
+      xmlns:ui="http://schemas.modernwpf.com/2019"
       mc:Ignorable="d" 
+      d:Background="#1E1F22"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DiscordRPC">
+    <Page.Resources>
+        <FontFamily x:Key="Montserrat" >/Montserrat/#Montserrat</FontFamily>
+    </Page.Resources>
     <Grid>
-        <TextBlock Text="DiscordRPC Page!" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="36" TextTrimming="CharacterEllipsis"/>
+        <Grid Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Click="CreateTemplateButton_Clicked" Margin="5" HorizontalAlignment="Stretch">
+                    <TextBlock Text="Create new Discord RPC status template..." FontFamily="{StaticResource Montserrat}" FontWeight="Bold" TextTrimming="CharacterEllipsis"/>
+                </Button>
+                <ScrollViewer Margin="5" Grid.Row="1">
+                    <ui:SimpleStackPanel>
+                        <Border Background="#33FFFFFF" CornerRadius="3" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="My first template..." FontFamily="{StaticResource Montserrat}" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="18" FontWeight="Bold" TextTrimming="CharacterEllipsis"/>
+                                <Button Grid.Column="1" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <ui:SymbolIcon Symbol="More"/>
+                                </Button>
+                                <Button Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <ui:SymbolIcon Symbol="Play"/>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </ui:SimpleStackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

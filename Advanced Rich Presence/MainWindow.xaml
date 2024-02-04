@@ -13,67 +13,6 @@
         ui:TitleBar.IsIconVisible="True"
         Title="Advanced Rich Presence" WindowStartupLocation="CenterScreen" Height="600" Width="800" MinWidth="334">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid Panel.ZIndex="10" Background="#1E1F22">
-            <Button Name="menuClickButton" Background="Transparent" Click="MenuClickButton_Click">
-                <Button.Content>
-                    <ui:SymbolIcon HorizontalAlignment="Center" VerticalAlignment="Center" Symbol="List"/>
-                </Button.Content>
-            </Button>
-        </Grid>
-        <ui:SplitView Name="menuView" PaneBackground="#1E1F22" Grid.RowSpan="2" OpenPaneLength="200">
-            <ui:SplitView.Pane>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <ScrollViewer Margin="0,25,0,0">
-                        <ui:SimpleStackPanel Spacing="10">
-                            <Button Name="discordRPCMenuButton" Click="DiscordRPCMenuButton_Click" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
-                                <Button.Content>
-                                    <Grid HorizontalAlignment="Stretch">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="auto"/>
-                                            <ColumnDefinition/>
-                                        </Grid.ColumnDefinitions>
-                                        <ui:SymbolIcon Symbol="Play"/>
-                                        <TextBlock Margin="12,0,0,0" Grid.Column="1" Text="Discord RPC"/>
-                                    </Grid>
-                                </Button.Content>
-                            </Button>
-                            <Button Name="helpMenuButton" Click="HelpMenuButton_Click" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
-                                <Button.Content>
-                                    <Grid HorizontalAlignment="Stretch">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="auto"/>
-                                            <ColumnDefinition/>
-                                        </Grid.ColumnDefinitions>
-                                        <ui:SymbolIcon Symbol="Help"/>
-                                        <TextBlock Margin="12,0,0,0" Grid.Column="1" Text="Help"/>
-                                    </Grid>
-                                </Button.Content>
-                            </Button>
-                        </ui:SimpleStackPanel>
-                    </ScrollViewer>
-                    <Button Name="authorMenuButton" Click="AuthorMenuButton_Click" Grid.Row="1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
-                        <Button.Content>
-                            <Grid HorizontalAlignment="Stretch">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-                                <ui:SymbolIcon Symbol="Contact"/>
-                                <TextBlock Margin="12,0,0,0" Grid.Column="1" Text="Author"/>
-                            </Grid>
-                        </Button.Content>
-                    </Button>
-                </Grid>
-            </ui:SplitView.Pane>
-        </ui:SplitView>
-        <ui:Frame Name="mainPageView" Source="/Pages/DiscordRPCStarter.xaml" Grid.Row="1"/>
+        <ui:Frame Panel.ZIndex="-5" Name="mainPageView" Source="/Pages/DiscordRPCStarter.xaml" Grid.Row="1"/>
     </Grid>
 </Window>
