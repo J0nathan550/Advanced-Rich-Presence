@@ -23,23 +23,7 @@
                     <TextBlock Text="Create new Discord RPC status template..." FontFamily="{StaticResource Montserrat}" FontWeight="Bold" TextTrimming="CharacterEllipsis"/>
                 </Button>
                 <ScrollViewer Margin="5" Grid.Row="1">
-                    <ui:SimpleStackPanel>
-                        <Border Background="#33FFFFFF" CornerRadius="3" HorizontalAlignment="Stretch">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="auto"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="My first template..." FontFamily="{StaticResource Montserrat}" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="18" FontWeight="Bold" TextTrimming="CharacterEllipsis"/>
-                                <Button Grid.Column="1" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                                    <ui:SymbolIcon Symbol="More"/>
-                                </Button>
-                                <Button Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                                    <ui:SymbolIcon Symbol="Play"/>
-                                </Button>
-                            </Grid>
-                        </Border>
+                    <ui:SimpleStackPanel Name="templatePanel" Spacing="10">
                     </ui:SimpleStackPanel>
                 </ScrollViewer>
             </Grid>
