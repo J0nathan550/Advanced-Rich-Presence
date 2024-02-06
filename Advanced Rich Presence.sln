@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34526.213
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Rich Presence", "Advanced Rich Presence\Advanced Rich Presence.csproj", "{89B450FC-9631-4352-AD5D-82A68972C700}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Advanced Rich Presence", "Advanced Rich Presence\Advanced Rich Presence.csproj", "{89B450FC-9631-4352-AD5D-82A68972C700}"
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Advanced Rich Presence Packaging", "Advanced Rich Presence Packaging\Advanced Rich Presence Packaging.wapproj", "{EA847A3E-73ED-439F-805A-2FA43288703E}"
 EndProject
@@ -37,10 +37,10 @@ Global
 		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|ARM.Build.0 = Release|Any CPU
 		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|ARM64.ActiveCfg = Release|Any CPU
 		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|ARM64.Build.0 = Release|Any CPU
-		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|x64.ActiveCfg = Release|Any CPU
-		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|x64.Build.0 = Release|Any CPU
-		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|x86.ActiveCfg = Release|Any CPU
-		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|x86.Build.0 = Release|Any CPU
+		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|x64.ActiveCfg = Release|x64
+		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|x64.Build.0 = Release|x64
+		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|x86.ActiveCfg = Release|x86
+		{89B450FC-9631-4352-AD5D-82A68972C700}.Release|x86.Build.0 = Release|x86
 		{EA847A3E-73ED-439F-805A-2FA43288703E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EA847A3E-73ED-439F-805A-2FA43288703E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA847A3E-73ED-439F-805A-2FA43288703E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

@@ -7,12 +7,12 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="25bb86bd-b413-4f5e-bba1-3cc7c346af50"
-    Publisher="CN=J0nathan550"
+    Name="29953J0nathan550.25009B4B7792E"
+    Publisher="CN=FAFA6ACD-16B6-47B2-9B64-3E72929F9DEB"
     Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>Advanced Rich Presence Packaging</DisplayName>
+    <DisplayName>Advanced Rich Presence</DisplayName>
     <PublisherDisplayName>J0nathan550</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
@@ -43,7 +43,6 @@
   </Applications>
 
   <Capabilities>
-    <Capability Name="internetClient" />
     <rescap:Capability Name="runFullTrust" />
   </Capabilities>
 </Package>
