@@ -1,0 +1,64 @@
+﻿<Page x:Class="Advanced_Rich_Presence.Pages.HelpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Advanced_Rich_Presence.Pages"
+      xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HelpPage">
+    <Page.Resources>
+        <FontFamily x:Key="Montserrat" >/Montserrat/#Montserrat</FontFamily>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer>
+            <StackPanel Margin="10">
+                <TextBlock Foreground="White" TextAlignment="Center" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}" Text="Welcome to Advanced Rich Presence!" FontWeight="Bold" FontSize="20" Margin="0 0 0 10"/>
+                <TextBlock Foreground="White" TextAlignment="Center" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}" Text="This program allows you to customize your Discord RPC status with ease. Simply fill out the template forms and enjoy a personalized status." TextWrapping="Wrap" Margin="0 0 0 20"/>
+
+                <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}" Text="To get started:" FontWeight="Bold" Margin="0 20 0 10"/>
+                <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}" Text="1. Fill out the template forms provided." TextWrapping="Wrap"/>
+                <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}" Text="2. Click 'Save' to apply your new status." TextWrapping="Wrap" Margin="0 5"/>
+                <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}" Text="3. Press 'Play' to see your status in Discord." TextWrapping="Wrap"/>
+
+                <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}" Text="For a detailed tutorial, please click on the 'Video Tutorial' text below." TextWrapping="Wrap" Margin="0 20"/>
+                <StackPanel>
+                    <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}" FontSize="16" Text="Additional Information:" FontWeight="Bold"/>
+                    <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}">
+                    <Run Text="Discord Developer Portal:"/>
+                    <Hyperlink Click="DiscordDeveloperLink_Clicked">
+                        <Run Text="https://discord.com/developers"/>
+                    </Hyperlink>
+                    </TextBlock>
+                    <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}">
+                    <Run Text="Ko-Fi page to support:"/>
+                    <Hyperlink Click="KofiLink_Clicked">
+                        <Run Text="https://ko-fi.com/j0nathan550"/>
+                    </Hyperlink>
+                    </TextBlock>
+                    <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}">
+                    <Run Text="Video tutorial:"/>
+                    <Hyperlink Click="YouTubeVideo_Clicked">
+                        <Run Text="https://youtu.be/3cP8ylotnTI"/>
+                    </Hyperlink>
+                    </TextBlock>
+                    <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}">
+                    <Run Text="Saw a bug or exception? Contact me:"/>
+                    <Hyperlink Click="EmailLink_Clicked">
+                        <Run Text="jonathansoderstorm550@gmail.com"/>
+                    </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+                <Image Name="sans" Margin="0, 30, 0, 0" MouseLeftButtonDown="SansFight_Click" MouseEnter="SansFight_Hover" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Cursor="Hand" MouseLeave="SansFight_Leave" gif:AnimationBehavior.SourceUri="/Images/sans-idle.gif" Width="125" Height="125" RenderOptions.BitmapScalingMode="Fant"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Button Background="Transparent" BorderBrush="White" BorderThickness="1" Grid.Row="1" HorizontalAlignment="Stretch" Click="CloseHelpPage_Clicked">
+            <TextBlock Text="Close" FontFamily="{StaticResource Montserrat}" Foreground="White" FontWeight="Bold" TextTrimming="CharacterEllipsis"/>
+        </Button>
+    </Grid>
+</Page>

@@ -10,7 +10,7 @@ namespace Advanced_Rich_Presence.Classes
         public static string SavePath { get; private set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "J0nathan550", "Advanced Rich Presence");
         public static string SaveFileName { get; set; } = "save.json";
         public static string FullSaveFilePath { get; set; } = Path.Combine(SavePath, SaveFileName);
-        public static DiscordStatusModel discordStatusModel { get; set; } = new DiscordStatusModel();
+        public static DiscordStatusModel DiscordStatusModel { get; set; } = new DiscordStatusModel();
         public static bool IsEditing { get; set; } = false;
     }
 }

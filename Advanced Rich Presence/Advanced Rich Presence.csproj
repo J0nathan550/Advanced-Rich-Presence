@@ -11,6 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\discord-icon-splash.png" />
+    <None Remove="Images\help.png" />
+    <None Remove="Images\sans-glowing.gif" />
+    <None Remove="Images\sans-idle.gif" />
     <None Remove="Montserrat\Montserrat-Italic.ttf" />
     <None Remove="Montserrat\Montserrat.ttf" />
   </ItemGroup>
@@ -19,6 +23,9 @@
     <Resource Include="discord_icon.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\sans-glowing.gif" />
+    <Resource Include="Images\sans-idle.gif" />
     <Resource Include="Montserrat\Montserrat-Italic.ttf" />
     <Resource Include="Montserrat\Montserrat.ttf" />
   </ItemGroup>
@@ -26,6 +33,11 @@
   <ItemGroup>
     <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
     <PackageReference Include="ModernWpfUI" Version="0.9.6" />
+    <PackageReference Include="XamlAnimatedGif" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="Images\discord-icon-splash.png" />
   </ItemGroup>
 
 </Project>

@@ -19,7 +19,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock Name="discordTemplateTextBlock" Text="Creation of the Discord Status Template" FontFamily="{StaticResource Montserrat}" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20" Margin="0,10,0,5"/>
-        <Border Margin="5" Padding="5,10,5,8" Grid.Row="1" Background="#33FFFFFF" CornerRadius="3">
+        <Border Margin="5" Padding="5,10,5,8" Grid.Row="1" Background="Transparent" CornerRadius="3">
             <ScrollViewer>
                 <ui:SimpleStackPanel Spacing="10">
                     <ui:AutoSuggestBox Name="nameOfTemplateTextBox" Margin="5,0,5,0" PlaceholderText="Name of the template:" FontFamily="{StaticResource Montserrat}" Foreground="White" FontWeight="Bold" ToolTip="Regular name of the template." TextChanged="NameOfTemplate_TextChanged"/>
@@ -38,7 +38,7 @@
             </ScrollViewer>
         </Border>
         <Grid Grid.Row="2">
-            <Border Margin="5,0,5,0" Grid.ColumnSpan="2" Background="#33FFFFFF" CornerRadius="3">
+            <Border Margin="5,0,5,0" Grid.ColumnSpan="2" Background="Transparent" BorderBrush="White" BorderThickness="1" CornerRadius="3">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -54,10 +54,10 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Click="AcceptButton_Clicked" HorizontalAlignment="Stretch" Margin="5">
+            <Button BorderBrush="White" BorderThickness="1" Click="AcceptButton_Clicked" Background="Transparent" HorizontalAlignment="Stretch" Margin="5">
                 <ui:SymbolIcon Symbol="Accept"/>
             </Button>
-            <Button Click="CancelButton_Clicked" Grid.Column="1" Margin="5" HorizontalAlignment="Stretch">
+            <Button BorderBrush="White" BorderThickness="1" Click="CancelButton_Clicked" Background="Transparent" Grid.Column="1" Margin="5" HorizontalAlignment="Stretch">
                 <ui:SymbolIcon Symbol="Cancel"/>
             </Button>
         </Grid>

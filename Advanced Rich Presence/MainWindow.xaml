@@ -6,9 +6,9 @@
         mc:Ignorable="d"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True"
-        Background="#313338"
-        ui:TitleBar.Background="#1E1F22"
-        ui:TitleBar.InactiveBackground="#1E1F22"
+        Background="Black"
+        ui:TitleBar.Background="Black"
+        ui:TitleBar.InactiveBackground="Black"
         ui:ThemeManager.RequestedTheme="Dark"
         ui:TitleBar.IsIconVisible="True"
         Title="Advanced Rich Presence" WindowStartupLocation="CenterScreen" Height="600" Width="800" MinWidth="334">

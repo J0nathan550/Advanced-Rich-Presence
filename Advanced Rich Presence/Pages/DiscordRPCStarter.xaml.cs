@@ -27,7 +27,7 @@ public partial class DiscordRPCStarter : System.Windows.Controls.Page
         if (MainWindow.MainWindowInstance != null)
         {
             if (client != null && client.IsInitialized) client.Deinitialize();
-            Helpers.discordStatusModel = new();
+            Helpers.DiscordStatusModel = new();
             Helpers.IsEditing = false;
             if (MainWindow.MainWindowInstance.mainPageView.CurrentSourcePageType == typeof(CreateOrEditDiscordRPCStatus)) return;
             MainWindow.MainWindowInstance.mainPageView.Navigate(typeof(CreateOrEditDiscordRPCStatus));
@@ -64,9 +64,11 @@ public partial class DiscordRPCStarter : System.Windows.Controls.Page
         {
             Border border = new()
             {
-                Background = new SolidColorBrush(Color.FromArgb(0x33, 0xFF, 0xFF, 0xFF)),
+                Background = new SolidColorBrush(Color.FromArgb(0x00, 0x00, 0x00, 0x0)),
                 CornerRadius = new CornerRadius(3),
-                HorizontalAlignment = HorizontalAlignment.Stretch
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                BorderThickness = new Thickness(1),
+                BorderBrush = new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF))
             };
 
             SettingsClass.Settings.DiscordStatusTemplates[index].TemplateID = index;
@@ -102,7 +104,10 @@ public partial class DiscordRPCStarter : System.Windows.Controls.Page
             {
                 Margin = new Thickness(5),
                 VerticalAlignment = VerticalAlignment.Stretch,
-                HorizontalAlignment = HorizontalAlignment.Stretch
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                Background = Brushes.Transparent,
+                BorderBrush = Brushes.White,    
+                BorderThickness = new Thickness(1),
             };
             deleteButton.Click += async (s, e) =>
             {
@@ -131,7 +136,10 @@ public partial class DiscordRPCStarter : System.Windows.Controls.Page
             {
                 Margin = new Thickness(5),
                 VerticalAlignment = VerticalAlignment.Stretch,
-                HorizontalAlignment = HorizontalAlignment.Stretch
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                Background = Brushes.Transparent,
+                BorderBrush = Brushes.White,
+                BorderThickness = new Thickness(1)
             };
             SymbolIcon symbolIcon2 = new()
             {
@@ -144,7 +152,7 @@ public partial class DiscordRPCStarter : System.Windows.Controls.Page
                 {
                     if (client != null && client.IsInitialized) client.Deinitialize();
                     Helpers.IsEditing = true;
-                    Helpers.discordStatusModel = template;
+                    Helpers.DiscordStatusModel = template;
                     if (MainWindow.MainWindowInstance.mainPageView.CurrentSourcePageType == typeof(CreateOrEditDiscordRPCStatus)) return;
                     MainWindow.MainWindowInstance.mainPageView.Navigate(typeof(CreateOrEditDiscordRPCStatus));
                 }
@@ -155,7 +163,10 @@ public partial class DiscordRPCStarter : System.Windows.Controls.Page
                 Name = $"p{index}",
                 Margin = new Thickness(5),
                 VerticalAlignment = VerticalAlignment.Stretch,
-                HorizontalAlignment = HorizontalAlignment.Stretch
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                Background = Brushes.Transparent,
+                BorderBrush = Brushes.White,
+                BorderThickness = new Thickness(1)
             };
             SymbolIcon symbolIcon3 = new()
             {
@@ -255,10 +266,10 @@ public partial class DiscordRPCStarter : System.Windows.Controls.Page
                 Buttons =
                 [
                     new DiscordRPC.Button()
-                                {
-                                    Label = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[0].Label,
-                                    Url = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[0].Url
-                                }
+                    {
+                        Label = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[0].Label,
+                        Url = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[0].Url
+                    }
                 ],
                 Timestamps = Timestamps.Now
             };
@@ -281,20 +292,31 @@ public partial class DiscordRPCStarter : System.Windows.Controls.Page
                 Buttons =
                 [
                     new DiscordRPC.Button()
-                                {
-                                    Label = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[0].Label,
-                                    Url = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[0].Url
-                                },
-                                new DiscordRPC.Button()
-                                {
-                                    Label = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[1].Label,
-                                    Url = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[1].Url
-                                }
+                    {
+                        Label = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[0].Label,
+                        Url = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[0].Url
+                    },
+                    new DiscordRPC.Button()
+                    {
+                        Label = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[1].Label,
+                        Url = SettingsClass.Settings.DiscordStatusTemplates[thisIndex].Buttons[1].Url
+                    }
                 ],
                 Timestamps = Timestamps.Now
             };
         }
 
         client.SetPresence(richPresence);
+    }
+
+    private void HelpIcon_Clicked(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        if (MainWindow.MainWindowInstance != null)
+        {
+            if (client != null && client.IsInitialized) client.Deinitialize();
+            Helpers.IsEditing = false;
+            if (MainWindow.MainWindowInstance.mainPageView.CurrentSourcePageType == typeof(HelpPage)) return;
+            MainWindow.MainWindowInstance.mainPageView.Navigate(typeof(HelpPage));
+        }
     }
 }
