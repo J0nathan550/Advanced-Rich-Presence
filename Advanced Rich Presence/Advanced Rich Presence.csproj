@@ -7,14 +7,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>discord_icon.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
     <Platforms>AnyCPU;x86;x64</Platforms>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\discord-icon-splash.png" />
     <None Remove="Images\help.png" />
+    <None Remove="Images\icon-splash.png" />
     <None Remove="Images\sans-glowing.gif" />
     <None Remove="Images\sans-idle.gif" />
     <None Remove="Montserrat\Montserrat-Italic.ttf" />
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="discord_icon.ico">
+    <Resource Include="icon.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\help.png" />
@@ -39,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <SplashScreen Include="Images\discord-icon-splash.png" />
+    <SplashScreen Include="Images\icon-splash.png" />
   </ItemGroup>
 
 </Project>

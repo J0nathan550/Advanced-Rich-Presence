@@ -36,7 +36,7 @@
                     </Hyperlink>
                     </TextBlock>
                     <TextBlock Foreground="White" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Montserrat}">
-                    <Run Text="Ko-Fi page to support:"/>
+                    <Run Text="Ko-Fi page if you wish to support me:"/>
                     <Hyperlink Click="KofiLink_Clicked">
                         <Run Text="https://ko-fi.com/j0nathan550"/>
                     </Hyperlink>
